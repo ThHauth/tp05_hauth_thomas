@@ -1,0 +1,46 @@
+.page{
+    background-color: rgb(5, 10, 33);
+    /*background: radial-gradient(circle, rgba(101,101,101,1) 0%,  rgb(5, 10, 33) 100%); */
+    margin-left: 5%;
+    margin-right: 2.5%;
+    max-width: 90%;
+}
+
+label{
+    font-weight: bold;
+    font-family: "Rubik";
+    color: white;
+}
+h1{
+    font-weight: bold;
+    font-family: "Rubik";
+    color: white;
+    font-size: x-large;
+}
+
+.signupField {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    color:#9b1212;
+}
+
+.errorMessages {
+    color:#9b1212;
+}
+
+#civil{
+    padding: 0;
+}
+
+.form{
+    max-height: 80%;
+    /*background-color: rgba(245, 245, 245, 0.2);*/
+    border-radius: 5em;
+    padding: 5%;
+    margin-bottom: 0;
+}
+
+.title{
+    text-align: center;
+}

@@ -1,0 +1,31 @@
+<div class="mt-5 form-group d-flex justify-content-center">
+  <div class="form-row">
+    <div>
+      <label>Rechercher :</label>
+      <input type="text"  [(ngModel)]="filter" (ngModelChange)="TextSearch()" class="form-control">
+    </div>
+
+    <div id="disp" class="col form-group">
+      <label>Disponibilité : </label>
+      <select (change)="DisponibilitySearch()" [(ngModel)]="disp" name="duration" class="form-control">
+        <option selected>Tout</option>
+        <option>En stock</option>  
+        <option>Indisponible</option>              
+      </select>
+    </div> 
+  <div id="console" class="col form-group">
+    <label>Console : </label>
+    <select (change)="ConsoleSearch()" [(ngModel)]="console" name="duration" class="form-control">
+      <option selected>Tout</option>
+      <option>PS4</option>  
+      <option>XBox One</option>  
+      <option>PC</option>
+      <option>Nintendo Switch</option>              
+    </select>
+  </div> 
+</div>
+
+
+
+
+</div>

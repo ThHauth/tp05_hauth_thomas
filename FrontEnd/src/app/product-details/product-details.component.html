@@ -1,0 +1,22 @@
+<div class="d-flex justify-content-center">
+    <div class="col-lg-9 d-flex justify-content-center">
+        <div class="card mt-4 col-8">
+            <img class="card-img-top img-fluid" src={{actualProduct.imageSource}} alt="">
+            <div class="card-body">
+                <h3 class="card-title">{{actualProduct.nom}}</h3>
+                <h4>{{actualProduct.prix}} €</h4>
+                <p class="card-text">{{actualProduct.description}}</p>
+                <div class="d-flex" *ngIf="actualProduct.disponible; else elseBlock">
+                    <span class="align-self-center dispoDot"></span>
+                    <label class="align-self-center dispo">En stock</label>
+                    <button type="button" (click)="onClick()" class="ml-auto p-2 btn btn-dark">Acheter <i class="fa fa-shopping-basket"></i></button>
+                </div>
+                <ng-template #elseBlock>
+                    <span class="indispoDot"></span>
+                    <label class="indispo">Indisponible</label>
+                </ng-template>
+                <p>Console : {{actualProduct.plateforme}}</p>
+            </div>
+        </div>
+    </div>
+</div>

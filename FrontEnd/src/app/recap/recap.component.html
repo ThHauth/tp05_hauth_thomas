@@ -1,0 +1,32 @@
+<table class="table">
+    <thead>
+      <tr class="table-dark">
+        <th scope="col">Civilité</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Prénom</th>
+        <th scope="col">Téléphone</th>
+        <th scope="col">Adresse</th>
+        <th scope="col">Code postal</th>
+        <th scope="col">Ville</th>
+        <th scope="col">Pays</th>
+        <th scope="col">Mail</th>
+        <th scope="col">Login</th>
+        <th scope="col">Mot de passe</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-light">
+        <td>{{user.civilite}}</td>
+        <td>{{user.nom}}</td>
+        <td>{{user.prenom}}</td>
+        <td>{{user.tel|phoneFormat:user.formatTel}}</td>
+        <td>{{user.adresse}}</td>        
+        <td>{{user.codePostal}}</td>
+        <td>{{user.ville}}</td>
+        <td>{{user.pays}}</td>
+        <td>{{user.mail}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.motDePasse}}</td>
+      </tr>
+    </tbody>
+  </table>

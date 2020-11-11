@@ -1,0 +1,26 @@
+<app-search-bar (notify)="SaveConsoleFilter($event)" (notifyText)="SaveTextFilter($event)" (notifyDisp)="SaveDisponibilityFilter($event)"></app-search-bar>
+<div class="card-deck">
+    <div class="col-4"  *ngFor="let item of productArray">
+        <div class="card mb-4">
+            <a class="nav-link" [routerLink] = "['/productDetail',item.id]" routerLinkActive="active">
+            <img class="card-img-top mx-auto" src={{item.imageSource}} alt="Card image cap">
+        
+            <div class="card-body">
+                <h5 class="card-title">{{item.nom}}</h5>
+                <p class="card-text">{{item.prix}}€</p>
+            </div>
+        </a>
+            <div class="card-footer text-muted">
+                <div class="d-flex" *ngIf="item.disponible; else elseBlock">
+                    <span class="align-self-center dispoDot"></span>
+                    <label class="align-self-center dispo">En stock</label>
+                    <button type="button" (click)="onClick(item.id)" class="ml-auto p-2 btn btn-dark">Acheter <i class="fa fa-shopping-basket"></i></button>
+                </div>
+                <ng-template #elseBlock>
+                    <span class="indispoDot"></span>
+                    <label class="indispo">Indisponible</label>
+                </ng-template>
+            </div>       
+        </div>
+    </div>
+</div>
